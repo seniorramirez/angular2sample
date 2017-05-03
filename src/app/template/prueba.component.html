@@ -1,0 +1,16 @@
+<h3>Pruebas</h3>
+<pre>{{ARRPRUEBA}}</pre>
+<table>
+  <tr *ngFor="let p of ARRPRUEBA;let i = index;">
+    <td [ngClass]="p.primero.color">{{p.primero.name}}</td>
+    <td [ngClass]="p.segundo.color">{{p.segundo.name}}</td>
+    <td [ngClass]="p.tercero.color">{{p.tercero.name}}</td>
+    <td [ngClass]="p.cuarto.color">{{p.cuarto.name}}</td>
+    <td [ngClass]="p.quinto.color">{{p.quinto.name}}</td>
+    <td [ngClass]="p.sexto.color">{{p.sexto.name}}</td>
+    <td [ngClass]="p.septimo.color">{{p.septimo.name}}</td>
+    <td [ngClass]="p.octavo.color">{{p.octavo.name}}</td>
+    <td [ngClass]="p.noveno.color">{{p.noveno.name}}</td>
+    <td [ngClass]="p.decimo.color">{{p.decimo.name}}</td>
+  </tr>
+</table>
