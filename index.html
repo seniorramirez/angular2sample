@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/zone.js@0.6.23/dist/zone.js"></script>
+    <script src="https://unpkg.com/reflect-metadata@0.1.3/Reflect.js"></script>
+    <script src="https://unpkg.com/systemjs@0.19.31/dist/system.js"></script>
+    <script src="https://unpkg.com/typescript@1.8.10/lib/typescript.js"></script>
+    <script src="https://unpkg.com/show-current-browser-url"></script>
+    <script src="config/system.config.js"></script>
+    <script>
+      System.import('hellogalaxy').catch(console.error.bind(console)); 
+    </script>
+    
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div>
+      <script>
+      function toggleClass(cls) {
+        var regexp = new RegExp("\\b" + cls + "\\b");
+        if (regexp.exec(document.body.className)) {
+          document.body.className = document.body.className.replace(regexp, "");
+        } else {
+          document.body.className += " " + cls;
+        }
+      }
+      </script>
+      <button onClick="document.location.reload(true)">reload plunker</button>
+      <button onClick="toggleClass('debug-view')">toggle ui-view debug</button>
+      <button onClick="toggleClass('debug-sref')">toggle ui-sref debug</button>
+    </div>
+    
+    <my-app>
+      Loading...
+    </my-app>
+    <div id="statetree" style="position: fixed; right: 0; top: 0"></div>
+  </body>
+
+</html>
